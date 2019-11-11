@@ -135,19 +135,26 @@ class StellarisDataLibrary():
         "SlowLearners" : {
             "LeaderExperienceGain" : -25
             "Excludes" : ["QuickLearners"]
+            "tooltip" : "Members of this species are slow to learn from their experiences"
+            "cost" : -1
         }
         "Solitary" : {
             "PopHousingUsage" : 10
             "Excludes" : ["Communal", "Nerve", "Stapled"]
+            "tooltip" : "Members of this species tend to be solitary and territorial, often becoming agitated in crowded conditions"
         }
         "Wasteful" : {
             "PopConsumerGoodsUpkeep" : 10
             "Excludes" : ["Conservationist", "Hive-Minded"]
+            "tooltip" : "Members of this species seemingly have no concept of frugality and are prone to useless consumption."
+            "cost" : -1
         }
         "Weak" : {
             "ArmyDamage" : -20
             "WorkerOutput" : -2
             "Excludes" : ["Strong", "VeryStrong"]
+            "tooltip" : "Members of this species are physically weaker than average, making them poor fighters on the ground."
+            "cost" : -1
         }
     }
     self.lithoidtraits = {
@@ -157,17 +164,26 @@ class StellarisDataLibrary():
             "ArmyHealth" : 50
             "LeaderLifeSpan" : 50
             "FoodIsMinerals" : True
+            "tooltip" : "This species has silicon based biology, and consumes minerals rather than food. They are tougher than traditional organics, and have slower metabolisms, making them long lived but slow to reproduce."
         }
         "GaseousByproducts" : {
             "PopExoticGasProduction" : 0.01
             "Excludes" : ["ScintillatingSkin","VolatileExcretions"]
+            "tooltip" : "The metabolic porcesses of this species cause regular venting of gases useful to industry."
         }
         "ScintillatingSkin" : {
             "PopRareCrystalProduction" : 0.01
             "Excludes" : ["GaseousByproducts", "VolatileExcretions"]
+            "tooltip" : "The outermost layer of this species is studded with sparkling crystals and gemstones that ocasionally flake off."
         }
         "VolatileExcretions" : {
             "PopVolatileMoteProduction" : 0.01
             "Excludes" : ["GaseousByproducts", "ScintillatingSkin"-]
+            "tooltip" : "The highly compressed spoor created by this species is unstable and contains an unbelievable amount of power."
+        }
+    }
+    self.specialtraits = {
+        "Uplifted": {
+            "tooltip" : "This species was uplifted from a primitive origin, and it's members are happier when living on planets belonging to their benefactor."
         }
     }
