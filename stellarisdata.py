@@ -4,144 +4,175 @@ class StellarisDataLibrary():
 
     self.traits = {
         "Adapative" : {
-            "Habitability" : 10
+            "Habitability" : 10,
             "Excludes" : ["ExtremlyAdaptive", "Nonadaptive", "Robust"]
-        }
+        },
         "ExtremlyAdaptive" : {
-            "Habitability" : 20
+            "Habitability" : 20,
             "Excludes" : ["Adaptive", "Nonadaptive", "Robust"]
-        }
+        },
         "Agarian" : {
             "JobFoodProduction" : 15
-        }
+        },
         "Charismatic" : {
-            "JobAmenityProduction": 20
+            "JobAmenityProduction": 20,
             "Excludes" : ["Repugnant"]
-        }
+        },
         "Communal" : {
-            "PopHousingUsage" : -10
+            "PopHousingUsage" : -10,
             "Excludes" : ["Solitary", "Nerve", "Stapled"]
-        }
+        },
         "Conformists" : {
-            "GoverningEthicsAttraction" : 30
+            "GoverningEthicsAttraction" : 30,
             "Excludes" : ["Deviants", "Hive-Minded"]
-        }
+        },
         "Conservationist" : {
-            "PopConsumerGoodsUpkeep" : -10
+            "PopConsumerGoodsUpkeep" : -10,
             "Excludes" : ["Wasteful", "Hive-Minded"]
-        }
+        },
         "Enduring" : {
-            "LeaderLifeSpan" : 20
+            "LeaderLifeSpan" : 20,
             "Excludes" : ["Venerable", "Fleeting"]
-        }
+        },
         "Venerable" : {
-            "LeaderLifeSpan" : 80
+            "LeaderLifeSpan" : 80,
             "Excludes" : ["Enduring", "Fleeting"]
-        }
+        },
         "Industrious" : {
             "JobMineralProduction" : 15
-        }
+        },
         "Ingenious" : {
             "JobEnergyProduction" : 15
-        }
+        },
         "Intelligent": {
-            "JobEngineeringResearchProduction" : 10
-            "JobPhysicsResearchProduction" : 10
-            "JobSocietyResearchProduction" : 10
+            "JobEngineeringResearchProduction" : 10,
+            "JobPhysicsResearchProduction" : 10,
+            "JobSocietyResearchProduction" : 10,
             "Excludes" : ["Erudite","Nerve","Stapled","Uplifted(EnigmaticCache)","SomewhatUplifted"]
-        }
+        },
         "NaturalEngineers" : {
-            "JobEngineeringResearchProduction" : 15
+            "JobEngineeringResearchProduction" : 15,
             "Excludes" : ["NaturalPhysicists", "NaturalSociologists","Nerve","Stapled"]
-        }
+        },
         "NaturalPhysicists" : {
-            "JobPhysicsResearchProduction" : 15
+            "JobPhysicsResearchProduction" : 15,
             "Exlcudes" : ["NaturalEngineers","NaturalSociologists","Nerve","Stapled"]
-        }
+        },
         "NaturalSociologists" : {
-            "JobSocietyResearchProduction" : 15
+            "JobSocietyResearchProduction" : 15,
             "Exlcudes" : ["NaturalEngineers","NaturalPhysicists","Nerve","Stapled"]
-        }
+        },
         "Nomadic" : {
-            "ImmigrationPopGrowth" : 15
-            "ResettlementCost" : -25
+            "ImmigrationPopGrowth" : 15,
+            "ResettlementCost" : -25,
             "Excludes" : ["Sedentary"]
-        }
+        },
         "QuickLearners" : {
-            "LeaderExperienceGain" : 25
+            "LeaderExperienceGain" : 25,
             "Excludes" : ["SlowLearners"]
-        }
+        },
         "RapidBreeders" : {
-            "GrowthSpeed" : 10
-            "Excludes" : ["Fertile","SlowBreeders"]
-        }
+            "GrowthSpeed" : 10,
+            "Excludes" : ["Fertile","SlowBreeders"],
+            "tooltip" : "This species reproduces at a very rapid rate, increasing population growth.",
+            "cost" : 2
+        },
         "Resilient" : {
-            "ArmyDamage" : 50
-            "DefenseArmy": True
-        }
+            "ArmyDamage" : 50,
+            "DefenseArmy": True,
+            "tooltip" : "Members of this species are physiologically resilient and will fight like enraged brood mothers to defend their worlds.",
+            "cost" : 1
+        },
         "Strong" : {
-            "ArmyDamage" : 20
-            "WorkerOutput" : 2
-            "Excludes" : ["VeryStrong","Weak"]
-        }
+            "ArmyDamage" : 20,
+            "WorkerOutput" : 2,
+            "Excludes" : ["VeryStrong","Weak"],
+            "tooltip" : "Members of this species possess great physical strength, making them formidable fighters on the ground.",
+            "cost" : 1
+        },
         "VeryStrong" : {
-            "ArmyDamage" : 40
-            "WorkerOutput" : 5
-            "Excludes" : ["Strong", "Weak"]
-        }
+            "ArmyDamage" : 40,
+            "WorkerOutput" : 5,
+            "Excludes" : ["Strong", "Weak"],
+            "tooltip" : "Members of this species possess a strength that almost defies the laws of physics.",
+            "cost" : 3
+        },
         "Talented" : {
-            "LeaderLevelCap" : 1
-        }
+            "LeaderLevelCap" : 1,
+            "tooltip" : "Members of this species are born with a natural aptitude.",
+            "cost" : 1
+        },
         "Thrifty" : {
-            "JobTradeValue" : 25
-        }
+            "JobTradeValue" : 25,
+            "tooltip": "Members of this species are instinctively economical and are always looking to make a good profit, whatever corners need cutting.",
+            "cost" : 2
+        },
         "Traditional" : {
-            "JobUnityProduction" : 10
-            "Excludes" : ["Quarrelsome"]
-        }
+            "JobUnityProduction" : 10,
+            "Excludes" : ["Quarrelsome"],
+            "tooltip" : "Certain aspects of this species' cognition makes it predisposed to especially value historical precedence and group unity.",
+            "cost" : 1
+        },
         "Decadent" : {
-            "WorkerHapiness" : -10
-            "SlaveHapiness" : -10
-        }
+            "WorkerHapiness" : -10,
+            "SlaveHapiness" : -10,
+            "tooltip" : "This species believes that whenever there is hard work that needs doing, that work is always best done by somebody else.",
+            "cost" : -1
+        },
         "Deviants" : {
-            "GoverningEthicsAttraction" : -15
-            "Excludes" : ["Conformists", "Hive-Minded"]
-        }
+            "GoverningEthicsAttraction" : -15,
+            "Excludes" : ["Conformists", "Hive-Minded"],
+            "tooltip" : "These people are rebellious in natura nd constantly try to challenge the status-quo.",
+            "cost" : -1
+        },
         "Fleeting" : {
-            "LeaderLifespan" : -10
-            "Excludes" : ["Venerable", "Enduring"]
+            "LeaderLifespan" : -10,
+            "Excludes" : ["Venerable", "Enduring"],
+            "tooltip" : "Time is fleeting for this species. What they lack in longevity, they make up in other ways.",
+            "cost" : -1
         }
         "Nonadaptive" : {
             "Habitability" : -10
             "Excludes": ["Adaptive", "ExtremelyAdaptive", "Robust"]
+            "tooltip" : "This species does not adapt well to foreign environments."
+            "cost" : -2
         }
         "Quarrelsome": {
             "JobUnityProduction" : -10
             "Excludes" : "Traditional"
+            "tooltip" : "While not inherently distrustful, members of this species are often socially combative."
+            "cost" : -1
         }
         "Repugnant" : {
             "JobAmenityProduction" : -20
             "Excludes" : ["Charismatic"]
+            "tooltip" : "The physical appearance and customs of this species are considered offensive to others and few appreciate them as neighbors."
+            "cost" : -2
         }
         "Sedentary" : {
             "ImmigrationPopGrowth" : -15
             "ResettlementCost" : 25
             "Excludes" : ["Normadic"]
+            "tooltip" : "This species has a sedentary past, and it's members are reluctant to migrate away from where they grew up."
+            "cost" : -1
         }
         "SlowBreeders" : {
             "GrowthSpeed" : -10
             "Excludes" : ["RapidBreeders", "Fertile"]
+            "tooltip" : "This species reproduces at a slow rate, lowering population growth."
+            "cost" : -2
         }
         "SlowLearners" : {
             "LeaderExperienceGain" : -25
             "Excludes" : ["QuickLearners"]
-            "tooltip" : "Members of this species are slow to learn from their experiences"
+            "tooltip" : "Members of this species are slow to learn from their experiences."
             "cost" : -1
         }
         "Solitary" : {
             "PopHousingUsage" : 10
             "Excludes" : ["Communal", "Nerve", "Stapled"]
-            "tooltip" : "Members of this species tend to be solitary and territorial, often becoming agitated in crowded conditions"
+            "tooltip" : "Members of this species tend to be solitary and territorial, often becoming agitated in crowded conditions."
+            "cost" : -1
         }
         "Wasteful" : {
             "PopConsumerGoodsUpkeep" : 10
