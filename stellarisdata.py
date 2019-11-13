@@ -334,6 +334,51 @@ class StellarisDataLibrary():
                 "Excludes" : ["Intelligent", "Erudite", "Natural Physicists", "Natural Sociologists","Natural Engineers"],
                 "tooltip" : "Docile and delicious, this species has had its higher brain functions genetically altered to create a kind of harmless livestock that can care for itself, without the pesky need for social interaction or self-determination.",
             },
-            
-
+            "Nivlac" : {
+                "Habitability" : 50,
+                "PopGrowthSpeed" : 15,
+                "cost" : 2,
+                "req" : ["Impossible Organism", "DLC-Distant Stars`"],
+                "tooltip" : "This species possed perplexing adaptability, allowing it to thrive in most environments and survive virtually everywhere.",
+            },
+            "BrainSlugHost" : {
+                "JobEnginerringResearchProduction" : 10,
+                "JobPhysicsResearchProduction" : 10,
+                "JobSocietyResearchProduction" : 10,
+                "JobUnityProduction" : 10,
+                "PopGrowthSpeed" : -25,
+                "cost" : 0,
+                "req" : ["Neural Symbiosis","DLC-Distant Stars"], 
+                "tooltip" : "This species is enjoy the presence of a neural symbiont: A helpful slug that attaches itself to the brain stem of its host.",
+            },
+            "Unlifted" : {
+                "JobEnginerringResearchProduction" : -60,
+                "JobPhysicsResearchProduction" : -60,
+                "JobSocietyResearchProduction" : -60,
+                "cost" : 0,
+                "req" : ["Enigmatic Cache","DLC-Distant Stars"],
+                "tooltip" : "This species has suffered the tragic consequences of an uplifting gone wrong."
+            },
+            "SomewhatUplifted" : {
+                "JobEnginerringResearchProduction" : 10,
+                "JobPhysicsResearchProduction" : 10,
+                "JobSocietyResearchProduction" : 10,
+                "Excludes" : ["Intelligent"],
+                "req" : ["Enigmatic Cache","DLC-Distant Stars"],
+                "cost" : 0,
+                "tooltip" : "This species was partialy uplifted by a benevolent extragalactic intellect and has left some of its primitive origins behind.",
+            },
+            "Uplifted" : {
+                "JobResearchProduction" : 10,
+                "LeaderExperienceGain" : 10,
+                "req" : ["Enigmatic Cache", "DLC-Distant Stars"],
+                "cost" : 0,
+                "tooltip" : "This species was uplifted by a benevolent extragalctic intellect and has left its primitive origins behind.",
+            },
+            "NumisticAdministration" : {
+                "JobEnergyProduction" : 15,
+                "req" : ["Numistic Order Pops", "DLC-Megacorp"],
+                "cost" : 1,
+                "tooltip" : "This species has been trained in the holy art of Numistic Administration",
+            },
         },
