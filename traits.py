@@ -1,6 +1,6 @@
-class StellarisDataLibrary():
+class StellarisDataLibraryTraits():
     def __init_(self):
-        print("Stellaris Data Library Loaded")
+        print("Stellaris Data Library.Traits Loaded")
         self.traits = {
             "Adapative" : {
                 "Habitability" : 10,
@@ -348,7 +348,7 @@ class StellarisDataLibrary():
                 "JobUnityProduction" : 10,
                 "PopGrowthSpeed" : -25,
                 "cost" : 0,
-                "req" : ["Neural Symbiosis","DLC-Distant Stars"], 
+                "req" : ["Neural Symbiosis","DLC-DistantStars"], 
                 "tooltip" : "This species is enjoy the presence of a neural symbiont: A helpful slug that attaches itself to the brain stem of its host.",
             },
             "Unlifted" : {
@@ -356,7 +356,7 @@ class StellarisDataLibrary():
                 "JobPhysicsResearchProduction" : -60,
                 "JobSocietyResearchProduction" : -60,
                 "cost" : 0,
-                "req" : ["Enigmatic Cache","DLC-Distant Stars"],
+                "req" : ["Enigmatic Cache","DLC-DistantStars"],
                 "tooltip" : "This species has suffered the tragic consequences of an uplifting gone wrong."
             },
             "SomewhatUplifted" : {
@@ -364,21 +364,61 @@ class StellarisDataLibrary():
                 "JobPhysicsResearchProduction" : 10,
                 "JobSocietyResearchProduction" : 10,
                 "Excludes" : ["Intelligent"],
-                "req" : ["Enigmatic Cache","DLC-Distant Stars"],
+                "req" : ["Enigmatic Cache","DLC-DistantStars"],
                 "cost" : 0,
-                "tooltip" : "This species was partialy uplifted by a benevolent extragalactic intellect and has left some of its primitive origins behind.",
+                "tooltip" : "This species was partially uplifted by a benevolent extragalactic intellect and has left some of its primitive origins behind.",
             },
             "Uplifted" : {
                 "JobResearchProduction" : 10,
                 "LeaderExperienceGain" : 10,
-                "req" : ["Enigmatic Cache", "DLC-Distant Stars"],
+                "req" : ["Enigmatic Cache", "DL-DistantStars"],
                 "cost" : 0,
-                "tooltip" : "This species was uplifted by a benevolent extragalctic intellect and has left its primitive origins behind.",
+                "tooltip" : "This species was uplifted by a benevolent extragalactic intellect and has left its primitive origins behind.",
             },
             "NumisticAdministration" : {
                 "JobEnergyProduction" : 15,
-                "req" : ["Numistic Order Pops", "DLC-Megacorp"],
+                "req" : ["Numistic Order Pops"],
                 "cost" : 1,
-                "tooltip" : "This species has been trained in the holy art of Numistic Administration",
+                "tooltip" : "This species has been trained in the holy art of Numistic Administration.",
+            },
+        },
+        self.biologicalascentiontraits = {
+            "Erudite" : {
+                "JobResearcherProduction" : 20,
+                "LeaderLevelCap" : 1,
+                "Excludes" : ["Intelligent", "Nerve Stapled", "Uplifted(EnigmaticCache)", "SomewhatUplifted"],
+                "cost" : 4,
+                "tooltip" : "Biological engineering has unlocked previously dormant parts of this species' brains, greatly increasing mental activity.",
+            },
+            "Fertile" : {
+                "PopGrowthSpeed" : 30,
+                "PopHousingUsage" : -10,
+                "Excludes" : ["RapidBreeders", "Lithoid", "SlowBreeders"],
+                "cost" : 4,
+                "tooltip" : "The natural fecundity of this species has been dramatically enhanced through aggresive physical and behaviourial sculpting",
+            },
+            "Robust" : {
+                "Habitability" : 30,
+                "JobResourceProduction" : 5,
+                "LeaderLifeSpan" : 50,
+                "Excludes" : ["Adaptive", "Lithoid", "ExtremlyAdaptive", "Nonadaptive"],
+                "cost" : 4,
+                "tooltip" : "Bio-Omptized organs with redundant functions have made this species extraordinarily resistant to environmental hazards and disease.",
+            },
+            "Delicious" : {
+                "LiveStockFoodProduction" : 2,
+                "Excludes" : ["Lihoid"],
+                "cost" : 2,
+                "tooltip" : "This species has the curious evolutionary adaptation of being highly nutritious when eaten.",
+            },
+            "NerveStapled" : {
+                "JobResourceProduction" : 5,
+                "EmployRulerSpecialist" : False,
+                "EmployLeader" : False,
+                "NoHappiness" : True,
+                "NotFactionable" : True,
+                "Excludes" : ["Talented", "Intelligent", "NaturalPhysicists", "Natural Sociologists", "Natural Engineers", "Erudite", "Communal", "Solitary"],
+                "cost" : 3,
+                "tooltip" : "Unessential neural pathways relating to self-preservation and free-will are severed, creating a docile and obedient client species.",
             },
         },
